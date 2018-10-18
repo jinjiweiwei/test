@@ -35,7 +35,7 @@
     <script type='text/javascript'>
                   //找到内容为第六段的p元素
                   //通过replaceAll删除并替换这个节点
-    $('bt1').on('click',function(){
+    $('.bt1').on('click',function(){
     $('<a style="color:red">replaceAll替换的内容</a>').replaceAll('.right >div:last p:eq(1)')
 
 })
@@ -43,8 +43,8 @@
     <script type="text/javascript">
                   //找到内容为第二段的p元素
                   //通过replaceWith删除并替换这个节点
-    $('bt2').on('click',function(){
-    $('.right> div:first p:last').replaceWith("<a style='color:orange'>replaceWith替换第二段的内容</a>")
+    $('.bt2').on('click',function(){
+    $('.right> div:first p:last').replaceWith("<p style='color:orange'>replaceWith替换第二段的内容</p>")
 
 })
 

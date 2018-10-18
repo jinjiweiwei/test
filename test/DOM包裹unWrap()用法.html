@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM包裹unWrap()用法</title>
+    <script src="https://www.imooc.com/static/lib/jquery/1.9.1/jquery.js"></script>
+    <style>
+     .left,
+     .right{
+width:250px;
+height:120px;
+}   
+.left div ,
+.right div{
+width:400px;
+height:50px; 
+padding:5px;
+margin:5px;
+float:left;
+border:1px solid black;
+background-color:  #bbffaa;
+}
+.right div {
+        background: yellow;
+    }
+    p {
+        border: 1px solid red;
+    }
+    
+    a {
+        border: 1px solid blue;
+        background: orange;
+    }
+    </style>
+</head>
+<body>
+   <h2>DOM包裹unWrap()方法</h2> 
+<div class='left'>
+<div class='aaron1'>点击，通过unWrap方法给p元素删除父容器div</div>
+<div class='aaron2'>点击，通过unWrap的回调方法给a元素删除父容器div</div>
+</div>
+
+<div class='right'>
+<div>
+    <p>p元素</p>
+</div>
+
+<div>
+    <p>p元素</p>
+</div>
+
+</div>
+
+<div class='left'>
+<div>
+    <a>a元素</a>
+</div>
+
+<div>
+    <a>a元素</a>
+</div>
+
+</div>
+
+<script type='text/javascript'>
+$('.aaron1').on('click',function(){
+    //找到所有p元素，删除父容器div
+    $("p"). unwrap('<div></div>')
+})
+
+
+</script>
+
+<script type='text/javascript'>
+$('.aaron2').on('click',function(){
+//找到所有a元素，删除父容器div
+$('a').unwrap(function(){
+    return '<div></div>'
+})
+
+})
+</script>
+</body>
+</html>
