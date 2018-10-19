@@ -1,1 +1,56 @@
-！
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM包裹wrap()方法</title>
+    <script src="https://www.imooc.com/static/lib/jquery/1.9.1/jquery.js"></script>
+    <style>
+        .left div,
+        .right div {
+            width: 100px;
+            padding: 5px;
+            margin: 5px;
+            float: left;
+            border: 1px solid #ccc;
+            background: #bbffaa;
+        }
+        
+        .right div {
+            background: yellow;
+        }
+        
+        p {
+            border: 1px solid red;
+        }
+        
+        a {
+            border: 1px solid blue;
+        }
+        </style>
+
+</head>
+
+<body>
+       <h2> DOM包裹wrap（）方法</h2>
+<div class='left'>
+
+<button class='aaron1'>点击，通过wrap方法给p元素增加父容器div</button>
+<button class='aaron2'>点击，通过wrap的回调方法给a元素增加父容器</button>
+
+</div>
+<div class='right'>
+        <p>元素</p>
+        <p>元素</p>
+</div>
+
+<div class="left">
+        <a>a元素</a>
+        <a>a元素</a>
+</div>
+<script type='text/javascript'>
+        $(',aaron1').on(click)
+</script>
+</body>
+</html>
