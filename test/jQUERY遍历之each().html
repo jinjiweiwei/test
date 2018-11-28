@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery遍历之each()</title>
+    <script src="https://www.imooc.com/static/lib/jquery/1.9.1/jquery.js"></script>   
+    <style>
+        .left {
+            width: auto;
+            height: 150px;
+        }
+        
+        .left div {
+            width: 150px;
+            height: 120px;
+            padding: 5px;
+            margin: 5px;
+            float: left;
+            background: #bbffaa;
+            border: 1px solid #ccc;
+        }
+        </style>
+</head>
+<body>
+    <h2>each方法</h2>
+    <div class="left first-div">
+        <div class="div">
+            <ul>
+                <li>list item 1</li>
+                <li>list item 2</li>
+                <li>list item 3</li>
+            </ul>
+        </div>
+        <div class="div">
+            <ul>
+                <li>list item 4</li>
+                <li>list item 5</li>
+                <li>list item 6</li>
+            </ul>
+        </div>
+    </div>
+
+    <br/>
+    <button>点击：each方法遍历元素</button>
+    <button>点击：each方法回调判断</button>  
+<script type="text/javascript">
+$("button:first").click(function(){
+//遍历所有的li
+//修改每个li内的字体颜色
+$("li").each(function(index,element) {
+    $(this).css("color","red")
+})
+})
+</script>
+<script type="text/javascript">
+$("button:last").click(function() {
+    //遍历所有的li
+        //修改偶数li内的字体颜色
+        $("li").each(function(index,element){
+            if (index % 2) {
+                $(this).css("color","blue")
+            }   
+        })
+})
+</script>
+</body>
+</html>

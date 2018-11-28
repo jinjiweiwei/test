@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM鼠标事件之click与dblclick事件</title>
+    <script src="https://www.imooc.com/static/lib/jquery/1.9.1/jquery.js"></script>
+
+<style>
+    .test2{
+        background:#bbffaa;  }
+  
+    .test3{
+        background:yellow; }
+.test2 .test3{ border:1px solid red }
+
+</style>
+</head>
+<body>
+   <h2> .click()方法</h2> 
+   <h4>测试一</h4>
+   <button>元素绑定事件，弹出回调中的this</button>
+
+<script type="text/javascript">
+//this指向button元素
+$("button:eq(0)").click(function(){
+    alert(this)
+})
+</script>
+
+<h4>测试二</h4>
+
+<div clss="test2">
+<p>$("button:first").click(function(e) { alert(this)})</p>
+</div>
+<button>指定触发事件</button>
+
+<script type="text/javascript">
+$("p").click(function(e){
+    alert(e.target.textContent)
+})
+
+$("button:eq(1)").click(function(){
+
+    $("p").click()//指定触发事件
+})
+</script>
+
+<h4> 测试三</h4>
+
+<div class="test3">
+    <p>$(".right").click(111, set)</p>
+</div>
+<button>不同函数传递数据</button>
+<script type="text/javascript">
+//不同函数传递数据
+ function data(e){
+     alert(e.data)//111
+ }
+function a() {
+$("button:eq(2)").dblclick(111,data)
+}
+a();
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
