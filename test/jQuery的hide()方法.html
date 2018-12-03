@@ -25,14 +25,15 @@
         <div id='a1'>hide-show</div>
 
         <button>直接hide-show</button>
-    </div>
-    
+   
+
     <script type="text/javascript">
         $("button").click(function(){
-            $("#a1").hide().show(),
-            complete: function (){
-                alert("执行动画完毕")
-            }
+            $("#a1").hide("slow").show({duration:3000,
+                complete: function() {
+                    alert('执行3000ms动画完毕')
+                }}
+                )
         })
     </script>
    
