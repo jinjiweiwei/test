@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://www.imooc.com/static/lib/jquery/1.9.1/jquery.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){$("button").click(function(){
+            $("li").each(function(){
+                alert($(this).text())
+            });
+        });
+    });
+    </script>
+    <button>输出每个列表项的值</button>
+    <ul>
+        <li>Coffee</li>
+        <li>Milk</li>
+        <li>jiuice</li>
+    </ul>
+    
+</body>
+</html>
